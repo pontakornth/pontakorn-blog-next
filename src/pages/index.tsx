@@ -1,5 +1,6 @@
 import tw, { styled } from 'twin.macro'
 import { H1 } from '../components/elements/Heading'
+import Head from 'next/head'
 
 const Container = styled.div({
   ...tw`flex flex-col items-center justify-center h-screen`,
@@ -14,6 +15,9 @@ const ButtonBox = tw.div`flex flex-col justify-center h-full gap-y-5`
 
 const IndexPage = () => (
   <Container>
+    <Head>
+      <title>Pontakorn Blog</title>
+    </Head>
     <H1>Pontakorn Blog</H1>
   </Container>
 )
