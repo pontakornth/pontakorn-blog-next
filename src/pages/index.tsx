@@ -17,7 +17,7 @@ const IndexPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) =>
       <Head>
         <title>Pontakorn Blog</title>
       </Head>
-      <H1>Pontakorn Blog</H1>
+      <H1 color="primary">Pontakorn Blog</H1>
       {items.map(item => (
         <>
           <H2>{item.title}</H2>
