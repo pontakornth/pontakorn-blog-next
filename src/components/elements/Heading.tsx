@@ -15,8 +15,10 @@ function getHeading() {
 			...tw`font-bold mb-4`,
 			...headingSize[element],
 			variants: {
-				primary: {
-					...tw`text-indigo-700`,
+				color: {
+					primary: {
+						...tw`text-indigo-700`,
+					}
 				}
 			}
 		}))
