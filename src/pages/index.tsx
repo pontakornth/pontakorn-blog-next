@@ -5,6 +5,7 @@ import Head from 'next/head'
 import { BlogPost } from '../core/@types/BlogPost'
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { Navbar } from '../components/modules/Navbar'
+import { PostCard } from '../components/modules/PostCard'
 
 const Container = tw.div`text-center`
 
@@ -19,14 +20,16 @@ const IndexPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) =>
           <title>Pontakorn Blog</title>
         </Head>
         <H1 color="primary">Pontakorn Blog</H1>
-        {items.map(item => (
-          <>
-            <Link passHref href={`/${item.slug}`}>
-              <H2 as="a">{item.title}</H2>
-            </Link>
-            <p tw="mb-4">{item.description}</p>
-          </>
-        ))}
+        <div tw="grid grid-cols-1 lg:grid-cols-2 text-left gap-8 p-4">
+          {items.map(item => (
+            <>
+              <PostCard link={`/${item.slug}`}
+                title={item.title}
+                description={item.description}
+              />
+            </>
+          ))}
+        </div>
       </Container>
     </>
   )
