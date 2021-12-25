@@ -14,5 +14,16 @@ module.exports = {
 	...withBundleAnalyzer(withPreact(config)),
 	images: {
 		domains: ["images.contentful.com", "images.ctfassets.net"]
+	},
+	webpack(config) {
+		config.plugins.push(
+			// @ts-ignore
+			require("unplugin-icons/webpack")({
+				compiler: "jsx",
+				jsx: "react",
+			})
+		);
+
+		return config;
 	}
 }
