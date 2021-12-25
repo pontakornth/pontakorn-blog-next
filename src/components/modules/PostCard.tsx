@@ -1,24 +1,19 @@
 import tw from "twin.macro";
 import { H2 } from "../elements/Heading";
 import Link from "next/link";
+import { BlogPost } from "../../core/@types/BlogPost";
 export interface PostCardProps {
-  title: string;
-  description: string;
-  link: string;
+  post: BlogPost,
 }
-export const PostCard: React.FC<PostCardProps> = ({
-  title,
-  description,
-  link,
-}) => {
+export const PostCard: React.FC<PostCardProps> = ({ post }) => {
   return (
-    <div tw="p-4 rounded border border-primary shadow-lg">
-      <H2 tw="text-primary underline">
-        <Link href={link} passHref>
-          <a>{title}</a>
+    <div tw="p-4 rounded border border-primary shadow-lg text-left">
+      <H2 tw="text-primary underline text-3xl">
+        <Link href={`https:://blog.pontakorn.dev/${post.slug}`} passHref>
+          <a>{post.title}</a>
         </Link>
       </H2>
-      <p>{description}</p>
+      <p>{post.brief}</p>
     </div>
   );
 };
