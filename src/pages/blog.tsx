@@ -3,8 +3,16 @@ import { Container } from "../components/elements/Container"
 import { Navbar } from "../components/modules/Navbar"
 import Head from "next/head"
 import { H1 } from "../components/elements/Heading"
+import { getBlog } from "../services/getBlog"
+import { GetServerSideProps } from "next"
+import { BlogPost } from "../core/@types/BlogPost"
+import { PostCard } from "../components/modules/PostCard"
 
-const BlogPage = () => {
+interface BlogPostProps {
+  posts: Array<BlogPost>
+}
+
+const BlogPage = ({ posts }: BlogPostProps) => {
   return (
     <>
       <Navbar />
@@ -16,9 +24,24 @@ const BlogPage = () => {
         <p tw="text-lg">
           Under construction. You can read my blog on <a tw="text-primary hover:text-blue-600" href="https://blog.pontakorn.dev">blog.pontakorn.dev</a>
         </p>
+        <div tw="space-y-4 py-8">
+          {posts.map(post => (
+            <PostCard post={post} />
+          ))}
+        </div>
       </Container>
     </>
   )
 }
 
 export default BlogPage
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const result = await getBlog()
+  console.log(result)
+  return {
+    props: {
+      posts: result.user.publication.posts
+    }
+  }
+}
