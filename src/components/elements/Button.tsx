@@ -12,6 +12,9 @@ export const Button = styled.button({
 			},
 			primary: {
 				...tw`bg-primary hover:bg-blue-600 text-white`,
+			},
+			tech: {
+				...tw`border shadow-md font-bold`
 			}
 		}
 	}
