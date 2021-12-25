@@ -22,7 +22,8 @@ const BlogPage = ({ posts }: BlogPostProps) => {
         </Head>
         <H1 tw="text-indigo-700">Blog</H1>
         <p tw="text-lg">
-          Under construction. You can read my blog on <a tw="text-primary hover:text-blue-600" href="https://blog.pontakorn.dev">blog.pontakorn.dev</a>
+          These are latest posts on my blog. You can read my blog on <a tw="text-primary hover:text-blue-600" href="https://blog.pontakorn.dev">blog.pontakorn.dev</a><br></br>
+          There might be mixture of Thai and English.
         </p>
         <div tw="space-y-4 py-8">
           {posts.map(post => (
