@@ -9,7 +9,7 @@ import { Container } from '../components/elements/Container'
 
 
 
-const IndexPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const IndexPage = () => {
   const technologies = [
     "React",
     "Vue",
@@ -67,13 +67,3 @@ const IndexPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) =>
 }
 
 export default IndexPage
-
-export const getStaticProps: GetStaticProps = async (context) => {
-  const { getAllPosts } = await import("../services/getAllPosts")
-  const { blogPostCollection: allPosts } = await getAllPosts()
-  return {
-    props: {
-      posts: allPosts
-    }
-  }
-}
