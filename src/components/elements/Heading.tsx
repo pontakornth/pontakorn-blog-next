@@ -3,9 +3,9 @@ import tw, { styled, TwStyle } from 'twin.macro'
 type Heading = "h1" | "h2" | "h3"
 
 const headingSize: { [key in Heading]: TwStyle } = {
-	"h1": tw`text-5xl`,
-	"h2": tw`text-2xl`,
-	"h3": tw`text-xl`,
+	"h1": tw`text-6xl`,
+	"h2": tw`text-5xl`,
+	"h3": tw`text-3xl`,
 
 }
 
