@@ -2,16 +2,23 @@ import tw, { styled } from 'twin.macro'
 import Link from "next/link"
 import { H1, H2 } from '../components/elements/Heading'
 import Head from 'next/head'
-import { BlogPost } from '../core/@types/BlogPost'
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { Navbar } from '../components/modules/Navbar'
-import { PostCard } from '../components/modules/PostCard'
+import { Button } from '../components/elements/Button'
+import { Container } from '../components/elements/Container'
 
-const Container = tw.div`text-center`
 
 
 const IndexPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const { total, items } = posts as { total: number, items: BlogPost[] }
+  const technologies = [
+    "React",
+    "Vue",
+    "Svelte",
+    "TypeScript",
+    "JavaScript",
+    "Python",
+    "Django"
+  ]
   return (
     <>
       <Navbar></Navbar>
@@ -19,16 +26,40 @@ const IndexPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) =>
         <Head>
           <title>Pontakorn Blog</title>
         </Head>
-        <H1 color="primary">Pontakorn Blog</H1>
-        <div tw="grid grid-cols-1 lg:grid-cols-2 text-left gap-8 p-4">
-          {items.map(item => (
-            <>
-              <PostCard link={`/${item.slug}`}
-                title={item.title}
-                description={item.description}
-              />
-            </>
-          ))}
+        <H1 color="primary">Pontakorn</H1>
+        <p tw="text-2xl">I am a software engineer.</p>
+        <div tw="py-8 m-auto">
+          <H2 tw="text-5xl">About me</H2>
+          <div tw="space-y-4 text-lg text-left">
+            <p>
+              Hello, I am Pontakorn. You can call me Most.
+              I am a frontend developer and sometimes backend as well.
+            </p>
+            <p>
+              I love to apply knowledge I learned in project and seek
+              new area to learn.
+            </p>
+          </div>
+        </div>
+        <div tw="py-8 m-auto">
+          <H2>Technologies</H2>
+          <div tw="flex flex-row gap-3 py-4 flex-wrap justify-center">
+            {technologies.map(tech => (
+              <Button variant="tech" as="div" cursor="default">{tech}</Button>
+            ))}
+          </div>
+        </div>
+        <div tw="py-8 m-auto">
+          <H2>Contact</H2>
+          <div tw="space-y-4">
+            <p>
+              You can mail <a tw="text-primary hover:text-blue-600" href="mailto:pontakorn_most@outlook.com">pontakorn_most@outlook.com</a> or click buttons below.
+            </p>
+            <div tw="flex flex-col items-center gap-3">
+              <Button as="a" target="__blank" tw="bg-gray-700 text-white font-bold w-2/3 md:w-1/4" href="https://github.com/pontakornth">GitHub</Button>
+              <Button as="a" target="__blank" tw="border text-blue-600 font-bold w-2/3 md:w-1/4" href="mailto:pontakorn_most@outlook.com">E-mail</Button>
+            </div>
+          </div>
         </div>
       </Container>
     </>

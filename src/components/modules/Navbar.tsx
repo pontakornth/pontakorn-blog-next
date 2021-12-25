@@ -7,8 +7,8 @@ export const Navbar = () => {
 			<Link href="/" passHref>
 				<Button tw="font-bold text-xl" as="a" variant="link">Home</Button>
 			</Link>
-			<Link href="/about" passHref>
-				<Button tw="font-bold text-xl" as="a" variant="link">About</Button>
+			<Link href="/blog" passHref>
+				<Button tw="font-bold text-xl" as="a" variant="link">Blog</Button>
 			</Link>
 		</nav>
 	)
