@@ -2,7 +2,6 @@ import tw, { styled } from 'twin.macro'
 import Link from "next/link"
 import { H1, H2 } from '../components/elements/Heading'
 import Head from 'next/head'
-import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { Navbar } from '../components/modules/Navbar'
 import { Button } from '../components/elements/Button'
 import { Container } from '../components/elements/Container'
