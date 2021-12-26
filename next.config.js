@@ -21,6 +21,13 @@ module.exports = {
 			require("unplugin-icons/webpack")({
 				compiler: "jsx",
 				jsx: "react",
+				customCollections: {
+					'webring': {
+						'white': async () => await fetch("https://webring.wonderful.software/webring.white.svg").then(res => res.text()),
+						'black': async () => await fetch("https://webring.wonderful.software/webring.black.svg").then(res => res.text())
+
+					}
+				}
 			})
 		);
 
