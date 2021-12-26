@@ -28,7 +28,7 @@ const IndexPage = () => {
           <title>Pontakorn Blog</title>
         </Head>
         <H1 color="primary">Pontakorn</H1>
-        <p tw="text-2xl dark:text-green-600">I am a software engineer.</p>
+        <p tw="text-2xl">I am a software engineer.</p>
         <div tw="py-8 m-auto">
           <H2 tw="text-5xl">About me</H2>
           <div tw="space-y-4 text-lg text-left">

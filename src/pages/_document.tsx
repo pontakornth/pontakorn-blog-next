@@ -2,6 +2,7 @@
 // https://stitches.dev/docs/server-side-rendering
 
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
+import { GlobalStyles } from 'twin.macro'
 import { getCssText } from '../../stitches.config'
 
 export default class Document extends NextDocument {

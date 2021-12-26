@@ -30,9 +30,9 @@ export const DarkModeToggle = () => {
 		} else {
 			isDark = localColor === 'dark'
 		}
-		document.body.classList.remove('dark')
+		document.documentElement.classList.remove('dark')
 		if (isDark) {
-			document.body.classList.add('dark')
+			document.documentElement.classList.add('dark')
 		}
 	}, [localColor])
 	const toggleDark = () => setLocalColor(color => color === 'dark' ? 'light' : 'dark')

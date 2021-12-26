@@ -5,7 +5,7 @@ import { globalCss, CSS } from '../../stitches.config'
 
 const customStyles = {
   body: {
-    ...tw`antialiased`,
+    ...tw`antialiased dark:(bg-gray-800 text-gray-400)`,
   },
 }
 
