@@ -5,7 +5,7 @@ export const Button = styled.button({
 	variants: {
 		variant: {
 			link: {
-				...tw`text-primary hover:text-blue-600 visited:text-blue-700 underline bg-none`
+				...tw`text-primary hover:text-blue-600 visited:text-blue-700 dark:(text-blue-300 visited:text-blue-400) underline bg-none`
 			},
 			danger: {
 				...tw`bg-red-500 hover:bg-red-600 font-bold`,
