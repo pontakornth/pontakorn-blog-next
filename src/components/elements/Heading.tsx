@@ -17,7 +17,7 @@ function getHeading() {
 			variants: {
 				color: {
 					primary: {
-						...tw`text-indigo-700`,
+						...tw`text-indigo-700 dark:text-primary`,
 					}
 				}
 			}

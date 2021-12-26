@@ -60,7 +60,7 @@ const IndexPage = () => {
               <Button as="a" target="__blank" tw="bg-gray-700 text-white font-bold w-2/3 md:w-1/4" href="https://github.com/pontakornth">
                 <IconGithub tw="inline" /> GitHub
               </Button>
-              <Button as="a" target="__blank" tw="border text-blue-600 font-bold w-2/3 md:w-1/4" href="mailto:pontakorn_most@outlook.com">
+              <Button as="a" target="__blank" tw="border text-white bg-primary dark:(text-primary bg-white) font-bold w-2/3 md:w-1/4" href="mailto:pontakorn_most@outlook.com">
                 <IconEmail tw="inline" /> E-mail
               </Button>
             </div>
