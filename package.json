@@ -24,7 +24,8 @@
     "next-mdx-remote": "^3.0.7",
     "next-plugin-preact": "^3.0.6",
     "react": "npm:@preact/compat@^17.0.3",
-    "react-dom": "npm:@preact/compat@^17.0.3"
+    "react-dom": "npm:@preact/compat@^17.0.3",
+    "web-api-hooks": "^3.0.2"
   },
   "devDependencies": {
     "@iconify-icons/carbon": "^1.1.7",
