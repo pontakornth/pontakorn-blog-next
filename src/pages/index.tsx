@@ -57,7 +57,7 @@ const IndexPage = () => {
             {projects.map(project => (
               <div tw="border dark:border-white p-4 shadow-md">
                 <H3 color="primary" tw="underline">
-                  <a href={project.link} target="__blank">{project.name}</a>
+                  <a href={project.link} target="_blank">{project.name}</a>
                 </H3>
                 <p>{project.description}</p>
               </div>
