@@ -7,7 +7,9 @@ import { Button } from '../components/elements/Button'
 import { Container } from '../components/elements/Container'
 import IconGithub from '~icons/carbon/logo-github.jsx'
 import IconEmail from '~icons/carbon/email.jsx'
-import { projects } from '../projects.json'
+import projectFile from '../projects.json'
+
+const projects = projectFile.projects
 
 const Section = tw.section`py-8 m-auto`
 
