@@ -1,0 +1,14 @@
+{
+	"projects": [
+		{
+			"name": "Beattosetto",
+			"description": "Beatmaps collections site for osu!",
+			"link": "https://github.com/beattosetto/beattosetto"
+		},
+		{
+			"name": "Pontakorn's site",
+			"description": "Source code for this website",
+			"link": "https://github.com/pontakornth/pontakorn-blog-next"
+		}
+	]
+}
