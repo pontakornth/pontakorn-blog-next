@@ -14,7 +14,7 @@ export const Button = styled.button({
 				...tw`bg-primary hover:bg-blue-600 text-white`,
 			},
 			tech: {
-				...tw`border shadow-md font-bold`
+				...tw`border shadow-md font-bold cursor-default`
 			}
 		}
 	}
